@@ -13,25 +13,15 @@ public class Exercicio3 {
 		System.out.println("Digite o valor em segundos: ");
 		entrada = sc.nextInt();
 		
-		if (entrada < 60) {
-			System.out.println("Valor Formatado: 0:0:" + entrada);
-		}
-		else if(entrada > 60 && entrada < 3600) {
-			seg = entrada % 60;
-			min = entrada / 60;
-			System.out.println("Valor Formatado: 0:" + min + ":" + seg);
-		}
+		hr = entrada /3600;
+		entrada %= 3600;
 		
-		else if(entrada > 3600 ) {
-			
-			hr = entrada / 3600;
-			entrada = entrada % 3600;
-			min = entrada / 60;
-			seg = entrada % 60;
-			
-			System.out.println("Valor Formatado: " + hr + ":" + min + ":" + seg);
-		}
+		min = entrada / 60;
+		entrada %= 60;
 		
+		seg = entrada;
+		
+		System.out.printf("Valor Formatado: %d:%d:%d", hr, min, seg);
 		
 		sc.close();
 		
