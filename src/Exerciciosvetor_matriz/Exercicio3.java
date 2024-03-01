@@ -27,8 +27,16 @@ public class Exercicio3 {
 			somaPrinc += mat[i][i];
 			
 		}
+		
+		
+		System.out.print("\nElementos da Diagonal Secundária: ");
+		for (int i = 0; i < mat.length ; i++) {
+			
+			System.out.print(mat[i][((mat.length-i)-1)] + " ");
+			
+		}
+		
 		somaSec +=  mat[0][2] + mat[1][1]+  mat[2][0];
-		System.out.printf("\nElementos da Diagonal Secundária: %d %d %d", mat[0][2], mat[1][1], mat[2][0]);
 		System.out.println("\nSoma dos Elementos da Diagonal Principal: " + somaPrinc);
 		System.out.println("Soma dos Elementos da Diagonal Secundária: " + somaSec);
 		
